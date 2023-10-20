@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+        <!--order-tracking area start-->
+        <div class="pt-100px pb-100px">
+            <div class="container">
+                <div class="order-tracking">
+                    <p>To track your order please enter your Order ID in the box below and press the "Track" button. This was given to you on your receipt and in the confirmation email you should have received.</p>
+                    <form action="#">
+                        <div class="row mb-n-30px">
+                            <div class="col-12 mb-30px">
+                                <label for="orderID">Order ID</label>
+                                <input id="orderID" type="text" placeholder="Found in your order confirmation email.">
+                            </div>
+                            <div class="col-12 mb-30px">
+                                <label for="billingEmail">Billing email</label>
+                                <input id="billingEmail" type="text" placeholder="Email you used during checkout.">
+                            </div>
+                            <div class="col-12 text-center mb-30px">
+                                <button class="btn btn-dark btn-outline-hover-dark">Track</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--order-tracking Policy area end-->
+{% endblock content %}

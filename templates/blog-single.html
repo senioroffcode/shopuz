@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+        <div class="blog-grid pb-100px pt-100px main-blog-page single-blog-page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-12 offset-lg-2">
+                        <div class="blog-posts">
+                            <div class="single-blog-post blog-grid-post">
+                                <div class="blog-image single-blog">
+                                    <img class="img-fluid h-auto border-radius-10px" src="{{ blog.photo.url }}" alt="blog" />
+                                </div>
+                                <div class="blog-post-content-inner mt-30px">
+                                    <div class="blog-athor-date">
+                                        <span class="blog-date"><i class="fa fa-calendar" aria-hidden="true"></i>{{ blog.date }}</span>
+                                        <span><a class="blog-author" href="blog-grid.html"><i class="fa fa-user" aria-hidden="true"></i> {{ blog.name }}</a></span>
+                                    </div>
+                                    <h4 class="blog-title">{{ blog.text }}</h4>
+                                    <p data-aos="fade-up">
+                             {{ blog.lorem }}
+                                    </p>
+
+                                </div>
+
+                            </div>
+                            <div class="another-post">
+                                <div class="image-side">
+                                    <img src="assets/images/blog-image/side-image.webp" alt="">
+                                </div>
+                            </div>
+                            <!-- single blog post -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Blag Area End -->
+        <!-- Footer Area Start -->
+{% endblock content %}

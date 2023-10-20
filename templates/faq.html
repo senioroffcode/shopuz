@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+        <!--Faq Policy area start-->
+        <div class="login-register-area pb-100px pt-100px faq-area">
+            <div class="container">
+                <div class="row">
+                    <div class="ml-auto mr-auto col-lg-9">
+                        <div class="checkout-wrapper">
+                            <div class="inner-descripe" data-aos="fade-up" data-aos-delay="200">
+                                <h4 class="title">Below are frequently asked questions, you may find the answer for yourself
+                                </h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id erat sagittis, faucibus
+                                    metus malesuada, eleifend turpis. Mauris semper augue id nisl aliquet, a porta lectus
+                                    mattis. Nulla at tortor augue. In eget enim diam.
+                                    Donec gravida tortor sem, ac fermentum nibh rutrum sit amet. Nulla convallis mauris
+                                    vitae congue consequat. Donec interdum nunc purus, vitae vulputate arcu fringilla quis.
+                                    Vivamus iaculis euismod dui.</p>
+                            </div>
+                            <div id="faq" class="panel-group">
+                                {% for i in faq %}
+                                <div class="panel panel-default single-my-account" data-aos="fade-up" data-aos-delay="200">
+                                    <div class="panel-heading my-account-title">
+                                        <h3 class="panel-title"><span>{{ forloop.counter }}</span> <a data-bs-toggle="collapse" href="#my-account-1{{i.id}}" class="collapsed" aria-expanded="true">{{ i.question }}</a></h3>
+                                    </div>
+                                    <div id="my-account-1{{i.id}}" class="panel-collapse collapse show" data-bs-parent="#faq">
+                                        <div class="panel-body">
+                                            {{ i.answer }}
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Faq Policy area end-->
+{% endblock content %}
